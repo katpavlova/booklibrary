@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    max-height: 95px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu__item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--black);
+    font-size: 14px;
+    line-height: 20;
+    text-decoration: none;
+}
+
