@@ -4,6 +4,12 @@
     flex-direction: column;
 }
 
+.cardGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
 .cardList__loader{
     margin: auto;
     display: flex;

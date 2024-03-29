@@ -11,7 +11,6 @@ export class CardList extends DivComponent{
 
 
     render() {
-        this.el.classList.add('cardList');
         if (this.parentState.loading) {
             this.el.innerHTML = `
                 <div class = "cardList__loader">
@@ -21,13 +20,12 @@ export class CardList extends DivComponent{
             `;
             return this.el;
         }
-        this.el.innerHTML = `
-            <h1>
-            Найдено книг – ${this.parentState.numFound}
-            </h1>
-        `
+
+        const cardGrid = document.createElement('div');
+        cardGrid.classList.add('cardGrid');
+        this.el.append(cardGrid);
         for (const card of this.parentState.list) {
-            this.el.append(new Card(this.appState, card).render());
+            cardGrid.append(new Card(this.appState, card).render());
         }
         
         return this.el;
